@@ -1,14 +1,15 @@
 import express from 'express';
 import usersRouter from './src/module/users/users.router.js'
 import produtsRouter from './src/module/products/products.router.js'
+import cors from 'cors';
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 
-
-app.use('/users',usersRouter);
-app.use('/products',produtsRouter);
+app.use('/users', usersRouter);
+app.use('/products', produtsRouter);
 
 
 // Assignment 3:
